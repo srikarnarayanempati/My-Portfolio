@@ -5,3 +5,18 @@ document.querySelectorAll('nav a').forEach(anchor => {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#project-carousel', {
+      type      : 'loop',
+      drag      : 'free',
+      focus     : 'center',
+      perPage   : 3,
+      gap       : '1rem',
+      autoScroll: {
+        speed: 1,
+        pauseOnHover: true,
+        pauseOnFocus: false,
+      },
+    }).mount(window.splide.Extensions);
+  });

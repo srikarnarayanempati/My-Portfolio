@@ -7,8 +7,8 @@
 }
 
 body {
-    background:white;
-    color: #333;
+    background: #f4f6f8;
+    color: #2b2d42;
 }
 
 .hero-section {
@@ -16,10 +16,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../assets/hero-bg.jpg') no-repeat center center/cover;
-    color: white;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    flex-direction: column;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
+
 .profile-pic {
     width: 200px;
     height: 200px;
@@ -33,38 +34,39 @@ h2 {
 }
 
 .project-card {
-    background: #f8f9fa;
-    padding: 20px;
+    background: #e8eefa;
+    padding: 25px;
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
+    margin-bottom: 25px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
 }
 
 .social-icons a {
     margin: 10px;
-    color: #333;
+    color: #2b2d42;
     text-decoration: none;
     transition: 0.3s;
 }
 
 .social-icons a:hover {
-    color: #007bff;
+    color: #0c66f7;
 }
+
 /* Background colors for each section */
 #home {
-    background: #222;
-    color: white;
+    background: #1e1e2f;
+    color: #ffffff;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 #about {
-    background: #f8f9fa;
-    padding: 60px 20px 0px 20px;
+    background: #f1f3f5;
+    padding: 60px 20px 30px 20px;
 }
+
 /* About Section Layout */
 #about .row {
     display: flex;
@@ -96,7 +98,7 @@ h2 {
 }
 
 #resume {
-    background: #e3f2fd;
+    background: #d0ebff;
     padding: 60px 0;
 }
 
@@ -104,6 +106,7 @@ h2 {
     background: #f8f9fa;
     padding: 60px 0;
 }
+
 /* Make images responsive */
 img {
     max-width: 100%;
@@ -120,5 +123,38 @@ img {
     }
     .btn {
         padding: 8px 16px;
+    }
+}
+
+/* RESPONSIVE FIX */
+@media (max-width: 768px) {
+    .splide__slide {
+        min-width: 80vw !important;
+    }
+
+    .project-frame {
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .splide__slide {
+        min-width: 90vw !important;
+    }
+
+    .project-card {
+        padding: 10px;
+    }
+
+    .project-frame {
+        height: 200px;
+    }
+
+    .project-card h4 {
+        font-size: 1rem;
+    }
+
+    .project-card p {
+        font-size: 0.85rem;
     }
 }

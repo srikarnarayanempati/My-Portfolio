@@ -7,20 +7,141 @@
 }
 
 body {
-    background: #f4f6f8;
-    color: #2b2d42;
+    background: #ffffff;
+    color: #243a41;
 }
 
+/* NAVBAR */
+.navbar {
+    background-color: #efbe2c;
+}
+
+/* HERO SECTION */
 .hero-section {
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: #ffffff;
-    flex-direction: column;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    padding: 0 80px;
 }
 
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+    color: #ffffff;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-text h2 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #ffffff;
+    max-width: 550px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline {
+    border: 2px solid #000;
+    color: #000;
+    background-color: transparent;
+}
+
+.btn-outline:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 600px;
+}
+
+/* MEDIA QUERY: HERO SECTION */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 100px 20px 40px 20px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text h2 {
+        font-size: 25px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .hero-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* GLOBAL IMAGE */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* PROFILE IMAGE */
 .profile-pic {
     width: 200px;
     height: 200px;
@@ -28,11 +149,13 @@ body {
     object-fit: cover;
 }
 
+/* SECTION HEADINGS */
 h2 {
     margin-bottom: 20px;
     font-weight: 600;
 }
 
+/* PROJECT CARD */
 .project-card {
     background: #e8eefa;
     padding: 25px;
@@ -41,9 +164,10 @@ h2 {
     transition: 0.3s;
     margin-bottom: 25px;
     border: 1px solid #dee2e6;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
 
+/* SOCIAL ICONS */
 .social-icons a {
     margin: 10px;
     color: #2b2d42;
@@ -55,32 +179,29 @@ h2 {
     color: #0c66f7;
 }
 
-/* Background colors for each section */
+/* SECTIONS BACKGROUND */
 #home {
-    background: #1e1e2f;
+    background: #243a41;
     color: #ffffff;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-#about {
-    background: #f1f3f5;
+#about, #resume, #contact {
+    background: #ffffff;
     padding: 60px 20px 30px 20px;
 }
+#projects {
+    background: #ffffff;
+    padding: 60px 0;
+}
 
-/* About Section Layout */
+/* ABOUT SECTION */
 #about .row {
     display: flex;
     align-items: center;
 }
 
-.profile-pic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* Skills Logos */
+/* SKILLS */
 .skills-logos img {
     width: 50px;
     height: 50px;
@@ -92,41 +213,39 @@ h2 {
     transform: scale(1.2);
 }
 
-#projects {
-    background: #ffffff;
-    padding: 60px 0;
+/* RESUME */
+.resume-left {
+    padding-left: 200px !important;
 }
 
-#resume {
-    background: #d0ebff;
-    padding: 60px 0;
+/* CONTACT */
+.custom-line {
+    border: none;
+    border-top: 2px solid #333;
+    width: 80%;
+    margin: 30px auto;
 }
 
-#contact {
-    background: #f8f9fa;
-    padding: 60px 0;
-}
-
-/* Make images responsive */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Reduce font size on small screens */
+/* RESPONSIVE TEXT + BUTTONS */
 @media (max-width: 768px) {
     h1, h2 {
         font-size: 24px;
     }
+
     p {
         font-size: 14px;
     }
+
     .btn {
         padding: 8px 16px;
     }
+
+    .resume-left {
+        padding-left: 20px !important;
+    }
 }
 
-/* RESPONSIVE FIX */
+/* PROJECT SLIDER & CARD RESPONSIVENESS */
 @media (max-width: 768px) {
     .splide__slide {
         min-width: 80vw !important;

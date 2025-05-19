@@ -277,3 +277,37 @@ h2 {
         font-size: 0.85rem;
     }
 }
+
+.certificate-card {
+    padding: 15px;
+    text-align: center;
+    background: #e8eefa;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin: 0 10px;
+  }
+  
+  .certificate-card img {
+    max-height: 500px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .certificate-card h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+  
+  /* Carousel adjustments */
+  .splide__pagination {
+    bottom: -20px;
+  }
+  
+  .splide__arrows {
+    margin-top: 1rem;
+  }
+

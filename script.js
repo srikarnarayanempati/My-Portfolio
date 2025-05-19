@@ -19,4 +19,17 @@ document.addEventListener('DOMContentLoaded', function () {
         pauseOnFocus: false,
       },
     }).mount(window.splide.Extensions);
+
+    new Splide('#certificate-carousel', {
+      type   : 'loop',
+      perPage: 3,
+      focus  : 'center',
+      gap    : '1rem',
+      breakpoints: {
+        768: {
+          perPage: 1,
+        },
+      },
+    }).mount();
+
   });

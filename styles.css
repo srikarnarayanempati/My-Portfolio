@@ -168,16 +168,53 @@ h2 {
 }
 
 /* SOCIAL ICONS */
-.social-icons a {
-    margin: 10px;
-    color: #2b2d42;
-    text-decoration: none;
-    transition: 0.3s;
+.icon-wrapper {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  padding: 8px;
 }
 
-.social-icons a:hover {
-    color: #0c66f7;
+.icon-box {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: url(#squircleClip);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 28px;
+  text-decoration: none;
 }
+
+.icon-box:hover {
+  transform: scale(1.1) translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Specific platform gradients */
+.github {
+  background: linear-gradient(to bottom right, #333333, #111111);
+  border: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.linkedin {
+  background: linear-gradient(to bottom right, #0077b5, #005582);
+  border: 1px solid rgba(0, 119, 181, 0.5);
+}
+
+.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  border: 1px solid rgba(253, 89, 73, 0.5);
+}
+.instagram i {
+  font-size: 32px; /* or any size you want */
+}
+
 
 /* SECTIONS BACKGROUND */
 #home {
@@ -225,6 +262,7 @@ h2 {
     width: 80%;
     margin: 30px auto;
 }
+
 
 /* RESPONSIVE TEXT + BUTTONS */
 @media (max-width: 768px) {
@@ -310,4 +348,5 @@ h2 {
   .splide__arrows {
     margin-top: 1rem;
   }
+
 

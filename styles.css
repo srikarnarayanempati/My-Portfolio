@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    
 }
 
 h1, h2 {
@@ -14,10 +15,9 @@ h1, h2 {
 }
 
 body {
-    background: #ffffff;
     color: #243a41;
     font-family: 'DM Sans', sans-serif;
-
+    overflow-x: hidden;
 }
 
 /* NAVBAR */

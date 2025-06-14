@@ -2,13 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+}
+
+h1, h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.note {
+  font-family: 'Gochi Hand', cursive;
 }
 
 body {
     background: #ffffff;
     color: #243a41;
+    font-family: 'DM Sans', sans-serif;
+
 }
 
 /* NAVBAR */

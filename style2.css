@@ -1,28 +1,29 @@
 /* MY NAME */
 .shiny-text {
-  color: #ffffff; /* Brighter text for button contrast */
-  background: linear-gradient(
-    120deg,
-    #40ffaa00 40%,  /* transparent */
-    #ffffff 50%,    /* white shimmer band */
-    #40ffaa00 60%   /* transparent */
-  ), 
-  linear-gradient(
-    90deg,
-    #40ffaa,
-    #4079ff,
-    #40ffaa,
-    #4079ff,
-    #40ffaa
-  );
+  color: #ffffff;
+  background: 
+    linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(255, 255, 255, 0.8) 50%,
+      rgba(255, 255, 255, 0) 60%
+    ),
+    linear-gradient(
+      90deg,
+      #b9935f,   /* warm gold */
+      #f5cc74,   /* soft yellow-gold */
+      #d4af37,   /* classic gold */
+      #f5cc74,
+      #b9935f
+    );
 
-  background-size: 200% 100%;
+  background-size: 300% 100%;
   background-blend-mode: lighten;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
-  animation: shine 2.0s linear infinite;
+  animation: shine 2.5s linear infinite;
 }
 
 @keyframes shine {
@@ -33,6 +34,9 @@
     background-position: -100%;
   }
 }
+
+
+
 
 .shiny-text.disabled {
   animation: none;
@@ -82,6 +86,14 @@
   box-shadow: 0 25px 70px rgb(113, 116, 113), 0 0 15px rgb(111, 115, 113);
 }
 
+.tilted-card {
+  perspective: 1000px;
+}
+
+.tilted-inner {
+  will-change: transform;
+}
+
 /* HAND WAVE */
 .wave {
   display: inline-block;
@@ -102,3 +114,79 @@
   100% { transform: rotate(0deg); }
 }
 
+.btn-glow {
+  color: #fff;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  border: none;
+  padding: 12px 28px;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.6), 0 0 24px rgba(79, 172, 254, 0.6);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-glow:hover {
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  box-shadow: 0 0 16px rgba(0, 242, 254, 0.9), 0 0 32px rgba(79, 172, 254, 0.9);
+  transform: scale(1.05);
+}
+
+.btn-hire {
+  color: #fff;
+  background: linear-gradient(135deg, #00ff99, #00cc66);
+  border: none;
+  padding: 12px 28px;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow: 0 0 12px rgba(0, 255, 153, 0.6), 0 0 24px rgba(0, 204, 102, 0.6);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-hire:hover {
+  background: linear-gradient(135deg, #00cc66, #00ff99);
+  box-shadow: 0 0 16px rgba(0, 255, 153, 0.9), 0 0 32px rgba(0, 204, 102, 0.9);
+  transform: scale(1.05);
+}
+
+.btn-resume {
+  color: #ffffff;
+  background: linear-gradient(135deg, #00e6e6, #1affb2);
+  border: none;
+  padding: 12px 28px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 0 12px rgba(0, 255, 204, 0.6), 0 0 24px rgba(0, 255, 153, 0.5);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-resume:hover {
+  background: linear-gradient(135deg, #1affb2, #00e6e6);
+  box-shadow: 0 0 18px rgba(0, 255, 204, 0.9), 0 0 32px rgba(0, 255, 153, 0.8);
+  transform: scale(1.05);
+}
+
+.btn-send {
+  color: #ffffff;
+  background: linear-gradient(135deg, #00ff95, #00d4ff);
+  border: none;
+  padding: 12px 28px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 0 12px rgba(0, 255, 204, 0.6), 0 0 24px rgba(0, 255, 153, 0.5);
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-send:hover {
+  background: linear-gradient(135deg, #00d4ff, #00ff95);
+  box-shadow: 0 0 18px rgba(0, 255, 204, 0.9), 0 0 32px rgba(0, 255, 153, 0.8);
+  transform: scale(1.05);
+}

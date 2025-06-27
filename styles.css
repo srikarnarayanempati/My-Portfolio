@@ -19,7 +19,9 @@ body {
     font-family: 'DM Sans', sans-serif;
     overflow-x: hidden;
 }
-
+html{
+    overflow-x:hidden;
+}
 /* NAVBAR */
 
 .glass-nav-wrapper {

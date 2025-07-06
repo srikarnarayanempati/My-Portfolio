@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-    
+    scroll-behavior: smooth;   
 }
 
 h1, h2 {
@@ -19,6 +18,16 @@ body {
     font-family: 'DM Sans', sans-serif;
     overflow-x: hidden;
 }
+html, body {
+  overflow-x: hidden;
+}
+
+.menu-box,
+.menu-button {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
 .navbar,
 .glass-nav-wrapper,
 .nav-link,

@@ -17,21 +17,44 @@
     
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container d-flex justify-content-between align-items-center">
-    <!-- <a class="navbar-brand fw-bold" href="#">Portfolio</a> -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <div class="glass-nav-wrapper ms-auto">
-        <ul class="navbar-nav gap-4">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="glass-nav-wrapper ms-auto">
+                    <ul class="navbar-nav gap-4">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<!-- Mobile Menu Button & Menu -->
+<div class="mobile-menu-wrapper d-lg-none">
+  <!-- Menu Button -->
+  <div class="menu-button" id="menuToggle">
+    <span class="menu-text">MENU</span>
   </div>
-</nav>
+
+  <!-- Menu Box -->
+  <div class="menu-box" id="mobileMenu">
+    <div class="close-btn" id="closeMenu">&times;</div> <!-- ✖ Close -->
+    <ul class="mobile-nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
 
 
     <section id="home" class="hero-section">
@@ -39,7 +62,7 @@
             <div class="hero-text">
                 <h1>Hi <span class="wave">👋</span></h1>
                 <h1>I’m <span class="text shiny-text">Srikar Empati</span></h1>
-                <h2>Front-end Developer & Data Enthusiast</h2>
+                <h2>Front-end Developer & <span class="italic-text">Data Enthusiast</span></h2>
                 <p>
                     I design and develop experiences that make people's lives simpler through web and mobile applications. I work with HTML, CSS, JavaScript, React, and more.
                 </p>
@@ -56,7 +79,7 @@
                     style="width: 100%; height: 100%"
                     loop
                     autoplay
-                ></dotlottie-player>            
+                ></dotlottie-player>
             </div>
         </div>
     </section>
@@ -68,14 +91,14 @@
                 <div class="tilted-card">
                     <div class="tilted-inner">
                         <img src="assets/profile.jpg" alt="Srikar Empati" class="tilted-img" 
-                        style="border-radius: 50%; width: 100%; height: 100%; object-fit: cover;">
+                        style="border-radius: 16px; width: 100%; height: 100%; object-fit: cover;">
                         <div class="light-glare"></div>
                     </div>
                 </div>
             </div>
             <div class="col-md-8">
-                <h1>About Me</h1>
-                <p>I'm a passionate Frontend Developer with expertise in HTML5, CSS3, Bootstrap, JavaScript, React.js. Currently learning Python, SQL, and mySQL and diving into Data Engineering & Analytics.</p>
+                <h1 style="font-weight: 600;">About Me</h1>
+                <p>I'm a passionate Frontend Developer with expertise in<span class="italic-text"> HTML5, CSS3, Bootstrap, JavaScript, React.js.</span class="italic-text"> Currently learning<span> Python, SQL, and mySQL </span>and diving into Data Engineering & Analytics.</p>
                 <h2>Skills</h2>
                 <p>Technologies I work with:</p>
                 <section class="skills-section">
@@ -242,11 +265,10 @@
         
             <div class="text-start">
                 <h3 style="margin-bottom: 20px;">Get in Touch</h3>
-                <p><strong>Email:</strong> srikarnarayan116@gmail.com</p>
+                <p><strong>Email:</strong> srikarnarayan@gmail.com</p>
                 <p><strong>Location:</strong> Hyderabad ,Telangana ,India</p>
             </div>
 
-            <!-- Include this SVG definition once in your HTML -->
             <svg width="0" height="0" style="position: absolute;">
             <defs>
                 <clipPath id="squircleClip" clipPathUnits="objectBoundingBox">

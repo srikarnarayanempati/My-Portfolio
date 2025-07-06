@@ -1,10 +1,18 @@
 document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+
+    // Only scroll if href starts with # and is not just #
+    if (href && href.startsWith('#') && href.length > 1) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
+      }
+    }
+  });
 });
+
 
 document.addEventListener('DOMContentLoaded', function () {
     // Project Carousel with AutoScroll
@@ -96,5 +104,43 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     window.addEventListener("scroll", handleNavbarVisibility);
-    handleNavbarVisibility(); // Run on page load
+    handleNavbarVisibility(); 
   });
+
+
+
+const toggleBtn = document.getElementById("menuToggle");
+const closeBtn = document.getElementById("closeMenu");
+const wrapper = document.querySelector(".mobile-menu-wrapper");
+
+// Open menu
+toggleBtn.addEventListener("click", () => {
+  wrapper.classList.add("active");
+});
+
+// Close menu
+closeBtn.addEventListener("click", () => {
+  wrapper.classList.remove("active");
+});
+
+// Smooth scroll + auto close
+document.querySelectorAll(".mobile-nav-links a").forEach(link => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    wrapper.classList.remove("active");
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+});
+
+// Auto close on scroll down
+let lastScrollTop = 0;
+window.addEventListener("scroll", function () {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (wrapper.classList.contains("active") && scrollTop > lastScrollTop && scrollTop > 50) {
+    wrapper.classList.remove("active");
+  }
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});

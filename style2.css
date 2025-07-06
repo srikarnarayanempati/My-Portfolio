@@ -10,9 +10,9 @@
     ),
     linear-gradient(
       90deg,
-      #b9935f,   /* warm gold */
-      #f5cc74,   /* soft yellow-gold */
-      #d4af37,   /* classic gold */
+      #b9935f,   
+      #f5cc74,  
+      #d4af37,   
       #f5cc74,
       #b9935f
     );
@@ -50,6 +50,11 @@
   margin: auto;
   perspective: 1000px;
 }
+@media (max-width: 768px) {
+  .tilted-card {
+    margin-bottom: 45px;
+  }
+}
 
 .tilted-inner {
   width: 100%;
@@ -62,7 +67,7 @@
 .tilted-img {
   width: 100%;
   height: 100%;
-  border-radius: 15px;
+  border-radius: 50% !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 25px 70px rgb(113, 116, 113), 0 0 15px rgb(111, 115, 113);
 }
@@ -100,7 +105,7 @@
   animation-name: wave-animation;
   animation-duration: 2s;
   animation-iteration-count: infinite;
-  transform-origin: 70% 70%; /* Makes the hand pivot from the wrist */
+  transform-origin: 70% 70%; 
 }
 
 @keyframes wave-animation {
@@ -190,3 +195,111 @@
   box-shadow: 0 0 18px rgba(0, 255, 204, 0.9), 0 0 32px rgba(0, 255, 153, 0.8);
   transform: scale(1.05);
 }
+
+
+/* --- Mobile Menu Wrapper --- */
+.mobile-menu-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+}
+
+/* --- Menu Button ("MENU") --- */
+.menu-button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  padding: 8px 16px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  display: inline-block;
+}
+
+/* Text inside the button */
+.menu-text {
+  display: block;
+  font-size: 16px;
+}
+
+/* --- Menu Box --- */
+.menu-box {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 220px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 20px 20px 20px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transform: scale(0.7);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Active state opens the box */
+.mobile-menu-wrapper.active .menu-box {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* --- Nav Links inside Menu Box --- */
+.mobile-nav-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.mobile-nav-links li {
+  margin-bottom: 15px;
+}
+
+.mobile-nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.mobile-nav-links li a:hover {
+  color: #00ffe7;
+}
+
+/* --- Close Button (✖) inside Menu Box --- */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show close button only when menu is open */
+.mobile-menu-wrapper.active .close-btn {
+  opacity: 1;
+}
+
+/* --- Responsive Control --- */
+@media (min-width: 992px) {
+  .mobile-menu-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .glass-nav-wrapper {
+    display: none !important;
+  }
+}
+
